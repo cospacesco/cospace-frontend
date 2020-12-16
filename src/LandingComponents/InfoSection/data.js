@@ -1,4 +1,3 @@
-import { FaLeaf } from "react-icons/fa";
 import image1 from "../../images/svg-1.svg";
 import image2 from "../../images/svg-2.svg";
 import image3 from "../../images/svg-3.svg";

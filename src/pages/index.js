@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar/index";
-import Herosection from "../components/HeroSection";
-import InfoSection from "../components/InfoSection";
+import Sidebar from "../LandingComponents/Sidebar";
+import Navbar from "../LandingComponents/Navbar/index";
+import Herosection from "../LandingComponents/HeroSection";
+import InfoSection from "../LandingComponents/InfoSection";
 import {
   homeObjOne,
   homeObjThree,
   homeObjTwo,
-} from "../components/InfoSection/data";
-import Services from "../components/Services";
-import Footer from "../components/footer";
+} from "../LandingComponents/InfoSection/data";
+import Services from "../LandingComponents/Services";
+import Footer from "../LandingComponents/footer";
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
