@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 
-const Landing = () => {
+const Landing = (props) => {
   return (
     <div>
       <Header />
