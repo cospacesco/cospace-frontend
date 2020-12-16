@@ -14,8 +14,10 @@ const Dashboard = () => {
   const classes = useStyles();
   return (
     <>
-      <HeaderDash />
       <Sidebar />
+      <div className={classes.appMain}>
+        <HeaderDash />
+      </div>
     </>
   );
 };
