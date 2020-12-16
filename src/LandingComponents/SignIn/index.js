@@ -28,6 +28,7 @@ function SignIn() {
             <FormButton type="submit">SignIn</FormButton>
             <Text>Forgot password?</Text>
           </Form>
+          <Icon to="/Dashboard">Dashboard</Icon>
         </FormContent>
       </FormWrap>
     </Container>

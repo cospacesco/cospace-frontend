@@ -15,11 +15,7 @@ const useStyles = makeStyles({
 
 const Sidebar = () => {
   const classes = useStyles();
-  return (
-    <div className={classes.sideBar}>
-      <h2>SIDEBAR</h2>
-    </div>
-  );
+  return <div className={classes.sideBar}></div>;
 };
 
 export default Sidebar;
