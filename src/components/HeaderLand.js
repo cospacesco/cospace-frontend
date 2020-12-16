@@ -1,13 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  IconButton,
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
+import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = () => {
+const HeaderLand = () => {
   const classes = useStyles();
   return (
     <AppBar position="static">
@@ -35,4 +28,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderLand;

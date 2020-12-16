@@ -1,11 +1,20 @@
 import React from "react";
-import Header from "./Header";
+import HeaderDash from "./HeaderDash";
 import Sidebar from "./Sidebar";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  appMain: {
+    paddingLeft: "320px",
+    width: "100%",
+  },
+});
 
 const Dashboard = () => {
+  const classes = useStyles();
   return (
     <>
-      <Header />
+      <HeaderDash />
       <Sidebar />
     </>
   );

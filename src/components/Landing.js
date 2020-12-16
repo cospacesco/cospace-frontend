@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "./Header";
+import HeaderLand from "./HeaderLand";
 
 const Landing = (props) => {
   return (
     <div>
-      <Header />
+      <HeaderLand />
       <h1>Home</h1>
     </div>
   );
