@@ -12,22 +12,25 @@ const useStyles = makeStyles({
     height: "100%",
     backgroundColor: "#253053",
   },
+  divider: {
+    margin: theme.spacing(4, 0, 1),
+  },
   //
   // Below profile.js css
   //
-  // root: {
-  //   display: "flex",
-  //   flexDirection: "column",
-  //   alignItems: "center",
-  //   minHeight: "fit-content",
-  // },
-  // avatar: {
-  //   width: 60,
-  //   height: 60,
-  // },
-  // name: {
-  //   marginTop: theme.spacing(1),
-  // },
+  root1: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    minHeight: "fit-content",
+  },
+  avatar: {
+    width: 60,
+    height: 60,
+  },
+  name: {
+    marginTop: theme.spacing(1),
+  },
   // Above profile.js css
   //
   // Below Sidebar.js css
@@ -104,18 +107,18 @@ const Sidebar = () => {
         // variant={variant}
       >
         <div>
-          <div className={clsx(classes.root, className)}>
+          <div className={classes.root1}>
             <Avatar
               alt="Person"
               className={classes.avatar}
-              component={RouterLink}
-              src={user.avatar}
+              // component={RouterLink}
+              // src={user.avatar}
               to="/settings"
             />
             <Typography className={classes.name} variant="h4">
               Username
             </Typography>
-            <Typography variant="body2">{user.bio}</Typography>
+            <Typography variant="body2">User Bio</Typography>
           </div>
 
           <Divider className={classes.divider} />
