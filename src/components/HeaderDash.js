@@ -17,12 +17,30 @@ const useStyles = makeStyles(() => ({
 const HeaderDash = () => {
   const classes = useStyles();
   return (
-    <AppBar position="static">
+    <AppBar {...rest} className={clsx(classes.root, className)}>
       <Toolbar>
-        <Typography variant="h6" className={classes.title}>
-          Dashboard Home
-        </Typography>
-        <Button color="inherit">Logout</Button>
+        <RouterLink to="/">
+          <img alt="Logo" src="/images/logo/logo.svg" />
+        </RouterLink>
+        <div className={classes.flexGrow} />
+        <a
+          className={classes.link}
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://github.com/cube-js/cube.js"
+        >
+          <img alt="GitHub" src="/images/github.svg" />
+          <span className={classes.git}>Github</span>
+        </a>
+        <a
+          className={classes.link}
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://slack.cube.dev/"
+        >
+          <img alt="Slack" src="/images/slack.svg" />
+          <span className={classes.git}>Slack</span>
+        </a>
       </Toolbar>
     </AppBar>
   );
