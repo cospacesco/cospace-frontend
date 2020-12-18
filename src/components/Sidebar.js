@@ -1,5 +1,6 @@
-import { makeStyles } from "@material-ui/core";
 import React from "react";
+import { makeStyles } from "@material-ui/core";
+import clsx from "clsx";
 import {
   Divider,
   Drawer,
@@ -9,8 +10,7 @@ import {
   ListItem,
   Button,
 } from "@material-ui/core";
-import clsx from "clsx";
-
+import avatar from "../images/avatar_1.png";
 const useStyles = makeStyles((theme) => ({
   sideBar: {
     display: "flex",
@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     backgroundColor: "#253053",
   },
+
   //
   // Below profile.js css
   //
@@ -58,9 +59,9 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     margin: theme.spacing(4, 0, 1),
   },
-  // nav: {
-  //   marginBottom: theme.spacing(2),
-  // },
+  nav: {
+    marginBottom: theme.spacing(2),
+  },
   // // Above Sidebar.js
   //
   // // Below SidebarNav.js
@@ -105,19 +106,19 @@ const Sidebar = () => {
   const classes = useStyles();
 
   const user = {
-    name: "Some Name",
-    // avatar: "/images/avatars/avatar_1.png",
-    bio: "Lorem ipsum",
+    name: "Name",
+    // avatar: { avatar },
+    bio: "Student",
   };
 
   return (
-    <div className={classes.sideBar}>
+    <div>
       <Drawer
         anchor="left"
         classes={{ paper: classes.drawer }}
-        // onClose={onClose}
-        // open={open}
-        // variant={variant}
+        onClose="true"
+        open="true"
+        variant="persistent"
       >
         <div className={classes.root2}>
           <div className={classes.root1}>
@@ -125,7 +126,7 @@ const Sidebar = () => {
               alt="Person"
               className={classes.avatar}
               // component={RouterLink}
-              // src={user.avatar}
+              src={avatar}
               to="/settings"
             />
             <Typography className={classes.name} variant="h4">
@@ -149,7 +150,22 @@ const Sidebar = () => {
                 // to={page.href}
               >
                 <div className={classes.icon}>I1</div>
-                Page Title
+                SPACE A
+              </Button>
+            </ListItem>
+            <ListItem
+              className={classes.item}
+              disableGutters
+              // key={page.title}
+            >
+              <Button
+                activeClassName={classes.active}
+                className={classes.button}
+                // component={CustomRouterLink}
+                // to={page.href}
+              >
+                <div className={classes.icon}>I1</div>
+                SPACE B
               </Button>
             </ListItem>
           </List>

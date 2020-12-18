@@ -24,10 +24,9 @@ const Dashboard = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
+        <HeaderDash />
         <Sidebar />
-        <div className={classes.appMain}>
-          <HeaderDash />
-        </div>
+        <div></div>
       </div>
     </ThemeProvider>
   );
