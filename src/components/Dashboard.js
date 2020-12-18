@@ -1,24 +1,35 @@
 import React from "react";
 import HeaderDash from "./HeaderDash";
 import Sidebar from "./Sidebar";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import theme from "../theme";
+import "typeface-roboto";
+import palette from "../theme/palette";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   appMain: {
     paddingLeft: "320px",
     width: "100%",
   },
-});
+  root: {
+    flexGrow: 1,
+    margin: "-8px",
+    backgroundColor: palette.primary.light,
+  },
+}));
 
 const Dashboard = () => {
   const classes = useStyles();
+
   return (
-    <>
-      <Sidebar />
-      <div className={classes.appMain}>
-        <HeaderDash />
+    <ThemeProvider theme={theme}>
+      <div className={classes.root}>
+        <Sidebar />
+        <div className={classes.appMain}>
+          <HeaderDash />
+        </div>
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 

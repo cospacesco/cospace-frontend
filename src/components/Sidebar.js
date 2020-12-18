@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import clsx from "clsx";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   sideBar: {
     display: "flex",
     flexDirection: "column",
@@ -99,7 +99,7 @@ const useStyles = makeStyles({
     },
   },
   // Above SidebarNav.js
-});
+}));
 
 const Sidebar = () => {
   const classes = useStyles();
