@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     position: "absolute",
     left: "0px",
-    width: "320px",
+    width: "300px",
     height: "100%",
     backgroundColor: "#253053",
   },
@@ -46,8 +46,8 @@ const useStyles = makeStyles((theme) => ({
   // Below Sidebar.js css
   //
   drawer: {
-    width: 290,
-    [theme.breakpoints.up("lg")]: {
+    width: 300,
+    [theme.breakpoints.up("xs")]: {
       marginTop: 64,
       height: "calc(100% - 64px)",
     },

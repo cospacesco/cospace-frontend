@@ -1,11 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
+import { AppBar, Toolbar } from "@material-ui/core";
 import palette from "../theme/palette";
-import { Link as RouterLink } from "react-router-dom";
-import clsx from "clsx";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-// import HomeLogo from "../images/homepage.svg";
 const useStyles = makeStyles((theme) => ({
   // root: {
   //   flexGrow: 1,
@@ -13,14 +10,15 @@ const useStyles = makeStyles((theme) => ({
   // menuButton: {
   //   marginRight: theme.spacing(2),
   // },
-  title: {
-    flexGrow: 1,
-  },
+  // title: {
+  //   flexGrow: 1,
+  // },
   //
   //
   // Below topbar.css
   //
   root: {
+    paddingLeft: "300",
     boxShadow: "none",
     backgroundColor: palette.primary.dark,
   },

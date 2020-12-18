@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   //   },
   // },
   shiftContent: {
-    paddingLeft: 240,
+    paddingLeft: 290,
   },
   content: {
     height: "100%",
@@ -38,9 +38,10 @@ const Dashboard = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
-        <HeaderDash />
         <Sidebar />
-        <div></div>
+        <div>
+          <HeaderDash />
+        </div>
       </div>
     </ThemeProvider>
   );
