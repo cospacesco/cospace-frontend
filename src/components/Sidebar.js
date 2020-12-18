@@ -1,6 +1,15 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
-import { Divider, Drawer, Avatar, Typography } from "@material-ui/core";
+import {
+  Divider,
+  Drawer,
+  Avatar,
+  Typography,
+  List,
+  ListItem,
+  Button,
+} from "@material-ui/core";
+import clsx from "clsx";
 
 const useStyles = makeStyles({
   sideBar: {
@@ -11,9 +20,6 @@ const useStyles = makeStyles({
     width: "320px",
     height: "100%",
     backgroundColor: "#253053",
-  },
-  divider: {
-    margin: theme.spacing(4, 0, 1),
   },
   //
   // Below profile.js css
@@ -35,23 +41,23 @@ const useStyles = makeStyles({
   //
   // Below Sidebar.js css
   //
-  // drawer: {
-  //   width: 240,
-  //   [theme.breakpoints.up("lg")]: {
-  //     marginTop: 64,
-  //     height: "calc(100% - 64px)",
-  //   },
-  // },
-  // root: {
-  //   backgroundColor: theme.palette.white,
-  //   display: "flex",
-  //   flexDirection: "column",
-  //   height: "100%",
-  //   padding: theme.spacing(4),
-  // },
-  // divider: {
-  //   margin: theme.spacing(4, 0, 1),
-  // },
+  drawer: {
+    width: 240,
+    [theme.breakpoints.up("lg")]: {
+      marginTop: 64,
+      height: "calc(100% - 64px)",
+    },
+  },
+  root2: {
+    backgroundColor: theme.palette.white,
+    display: "flex",
+    flexDirection: "column",
+    height: "100%",
+    padding: theme.spacing(4),
+  },
+  divider: {
+    margin: theme.spacing(4, 0, 1),
+  },
   // nav: {
   //   marginBottom: theme.spacing(2),
   // },
@@ -59,44 +65,51 @@ const useStyles = makeStyles({
   //
   // // Below SidebarNav.js
   // root: {},
-  // item: {
-  //   display: "flex",
-  //   paddingTop: 0,
-  //   paddingBottom: 0,
-  // },
-  // button: {
-  //   color: "#A1A1B5",
-  //   padding: "10px 8px",
-  //   justifyContent: "flex-start",
-  //   textTransform: "none",
-  //   letterSpacing: 0,
-  //   width: "100%",
-  //   fontSize: 14,
-  //   fontWeight: 500,
-  //   "&:hover": {
-  //     color: theme.palette.primary.main,
-  //   },
-  // },
-  // icon: {
-  //   color: theme.palette.icon,
-  //   width: 24,
-  //   height: 24,
-  //   display: "flex",
-  //   alignItems: "center",
-  //   marginRight: theme.spacing(1),
-  // },
-  // active: {
-  //   color: theme.palette.primary.main,
-  //   fontWeight: theme.typography.fontWeightMedium,
-  //   "& $icon": {
-  //     color: theme.palette.primary.main,
-  //   },
-  // },
-  // Allow SidebarNav.js
+  item: {
+    display: "flex",
+    paddingTop: 0,
+    paddingBottom: 0,
+  },
+  button: {
+    color: "#A1A1B5",
+    padding: "10px 8px",
+    justifyContent: "flex-start",
+    textTransform: "none",
+    letterSpacing: 0,
+    width: "100%",
+    fontSize: 14,
+    fontWeight: 500,
+    "&:hover": {
+      color: theme.palette.primary.main,
+    },
+  },
+  icon: {
+    color: theme.palette.icon,
+    width: 24,
+    height: 24,
+    display: "flex",
+    alignItems: "center",
+    marginRight: theme.spacing(1),
+  },
+  active: {
+    color: theme.palette.primary.main,
+    fontWeight: theme.typography.fontWeightMedium,
+    "& $icon": {
+      color: theme.palette.primary.main,
+    },
+  },
+  // Above SidebarNav.js
 });
 
 const Sidebar = () => {
   const classes = useStyles();
+
+  const user = {
+    name: "Some Name",
+    // avatar: "/images/avatars/avatar_1.png",
+    bio: "Lorem ipsum",
+  };
+
   return (
     <div className={classes.sideBar}>
       <Drawer
@@ -106,7 +119,7 @@ const Sidebar = () => {
         // open={open}
         // variant={variant}
       >
-        <div>
+        <div className={classes.root2}>
           <div className={classes.root1}>
             <Avatar
               alt="Person"
@@ -116,14 +129,30 @@ const Sidebar = () => {
               to="/settings"
             />
             <Typography className={classes.name} variant="h4">
-              Username
+              {user.name}
             </Typography>
-            <Typography variant="body2">User Bio</Typography>
+            <Typography variant="body2">{user.bio}</Typography>
           </div>
 
           <Divider className={classes.divider} />
 
-          <SidebarNav className={classes.nav} pages={pages} />
+          <List className={clsx(classes.root, classes.nav)}>
+            <ListItem
+              className={classes.item}
+              disableGutters
+              // key={page.title}
+            >
+              <Button
+                activeClassName={classes.active}
+                className={classes.button}
+                // component={CustomRouterLink}
+                // to={page.href}
+              >
+                <div className={classes.icon}>I1</div>
+                Page Title
+              </Button>
+            </ListItem>
+          </List>
         </div>
       </Drawer>
     </div>
