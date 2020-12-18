@@ -11,6 +11,9 @@ import {
   Button,
 } from "@material-ui/core";
 import avatar from "../images/avatar_1.png";
+import DashboardIcon from "@material-ui/icons/Dashboard";
+import AssignmentIcon from "@material-ui/icons/Assignment";
+
 const useStyles = makeStyles((theme) => ({
   sideBar: {
     display: "flex",
@@ -32,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "fit-content",
   },
   avatar: {
-    width: 60,
-    height: 60,
+    width: 80,
+    height: 80,
   },
   name: {
     marginTop: theme.spacing(1),
@@ -43,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   // Below Sidebar.js css
   //
   drawer: {
-    width: 240,
+    width: 290,
     [theme.breakpoints.up("lg")]: {
       marginTop: 64,
       height: "calc(100% - 64px)",
@@ -78,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     letterSpacing: 0,
     width: "100%",
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: 500,
     "&:hover": {
       color: theme.palette.primary.main,
@@ -116,7 +119,7 @@ const Sidebar = () => {
       <Drawer
         anchor="left"
         classes={{ paper: classes.drawer }}
-        onClose="true"
+        // onClose="true"
         open="true"
         variant="persistent"
       >
@@ -129,10 +132,10 @@ const Sidebar = () => {
               src={avatar}
               to="/settings"
             />
-            <Typography className={classes.name} variant="h4">
+            <Typography className={classes.name} variant="h3">
               {user.name}
             </Typography>
-            <Typography variant="body2">{user.bio}</Typography>
+            <Typography variant="body1">{user.bio}</Typography>
           </div>
 
           <Divider className={classes.divider} />
@@ -149,7 +152,9 @@ const Sidebar = () => {
                 // component={CustomRouterLink}
                 // to={page.href}
               >
-                <div className={classes.icon}>I1</div>
+                <div className={classes.icon}>
+                  <DashboardIcon />
+                </div>
                 SPACE A
               </Button>
             </ListItem>
@@ -164,7 +169,9 @@ const Sidebar = () => {
                 // component={CustomRouterLink}
                 // to={page.href}
               >
-                <div className={classes.icon}>I1</div>
+                <div className={classes.icon}>
+                  <AssignmentIcon />
+                </div>
                 SPACE B
               </Button>
             </ListItem>

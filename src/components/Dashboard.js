@@ -13,8 +13,22 @@ const useStyles = makeStyles((theme) => ({
   },
   root: {
     flexGrow: 1,
-    margin: "-8px",
+    margin: "0px",
     backgroundColor: palette.primary.light,
+  },
+  // root: {
+  //   paddingTop: 56,
+  //   height: "100%",
+  //   [theme.breakpoints.up("sm")]: {
+  //     paddingTop: 64,
+  //   },
+  // },
+  shiftContent: {
+    paddingLeft: 240,
+  },
+  content: {
+    height: "100%",
+    minHeight: "calc(100vh - 64px)",
   },
 }));
 
