@@ -19,7 +19,7 @@ function SignIn() {
         <Icon to="/">CoSpaces</Icon>
 
         <FormContent>
-          <Form action="#">
+          <Form action="/dashboard">
             <FormH1>Sign in to your Account</FormH1>
             <FormLabel htmlFor="for">Email</FormLabel>
             <FormInput type="email" required />
@@ -28,8 +28,8 @@ function SignIn() {
             <FormButton type="submit">SignIn</FormButton>
             <Text>Forgot password?</Text>
           </Form>
-          <Icon to="/Dashboard">Dashboard</Icon>
         </FormContent>
+        <Icon to="/dashboard">DashboardPlaceholder</Icon>
       </FormWrap>
     </Container>
   );

@@ -1,25 +1,20 @@
-<h1>Prototype:</h1>
+## CoSpaces
 
-<b>Landing Page</b>
-<br><br>
-<img src="https://github.com/cospacesco/cospace-frontend/blob/main/Prototype/landing_page.png">
+CoSpaces is a space for communities in tech & design to conduct online community events & track the progress of their participants with ease. Event moderators can post their daily tasks and ensure all participants complete them, all in a single dashboard. It also helps the members to grow a network of supportive, like-minded people!
 
-<b>Sign In</b>
-<br><br>
-<img src="https://github.com/cospacesco/cospace-frontend/blob/main/Prototype/Login.png">
+## UI Prototype
 
-<b>Dashboard</b>
-<br><br>
-<img src="https://github.com/cospacesco/cospace-frontend/blob/main/Prototype/Dashboard_home.png">
-<br><br>
-<img src="https://github.com/cospacesco/cospace-frontend/blob/main/Prototype/Dashboard_leaderboard.png">
-<br><br>
-<img src="https://github.com/cospacesco/cospace-frontend/blob/main/Prototype/Dashboard_problemstatement.png">
-<br><br>
-<img src="https://github.com/cospacesco/cospace-frontend/blob/main/Prototype/Dashboardsubmit.png">
-<br><br>
-<img src="https://github.com/cospacesco/cospace-frontend/blob/main/Prototype/Dashboardusers.png">
+Images are present in the Prototype Folder
+[Figma](https://www.figma.com/proto/BWGPab6AnuqjTwybIbyujB/Cospaces?node-id=0%3A1)
 
-<b>Project Contribution Page</b>
-<br><br>
-<img src="https://github.com/cospacesco/cospace-frontend/blob/main/Prototype/contributions.png">
+## Project Completion Status
+
+- [x] [Landing Page](https://cospaces.netlify.app)
+- [x] [Backend](https://github.com/cospacesco/cospaces-backend)
+- [ ] Dashboard
+- [ ] Authentication
+
+## Screenshots
+
+<br />
+<img src="placeholder">
