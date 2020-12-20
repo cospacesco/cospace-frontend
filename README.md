@@ -13,8 +13,3 @@ Images are present in the Prototype Folder
 - [x] [Backend](https://github.com/cospacesco/cospaces-backend)
 - [ ] Dashboard
 - [ ] Authentication
-
-## Screenshots
-
-<br />
-<img src="placeholder">
